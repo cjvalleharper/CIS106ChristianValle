@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 06:06:02 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDU6NDY6MTcgUE07MjkzMQ=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDY6MDY6MDIgUE07MzszMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mealprice" type="Real" array="False" size=""/>
+            <declare name="tip15" type="Real" array="False" size=""/>
+            <declare name="tip18" type="Real" array="False" size=""/>
+            <declare name="tip20" type="Real" array="False" size=""/>
+            <input variable="mealprice"/>
+            <assign variable="tip15" expression="mealprice*1.15"/>
+            <assign variable="tip18" expression="mealprice*1.18"/>
+            <assign variable="tip20" expression="mealprice*1.2"/>
+            <output expression="&quot;Total with 15% Tip is $&quot; &amp;tip15" newline="True"/>
+            <output expression="&quot;Total with 18% Tip is $&quot; &amp;tip18" newline="True"/>
+            <output expression="&quot;Total with 20% Tip is $&quot; &amp;tip20" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

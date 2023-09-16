@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 06:16:18 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDY6MTM6MjUgUE07MjkyNQ=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDY6MTY6MTggUE07MTszMDM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fixedcosts" type="Real" array="False" size=""/>
+            <declare name="ppu" type="Real" array="False" size=""/>
+            <declare name="cpu" type="Real" array="False" size=""/>
+            <declare name="breakeven" type="Real" array="False" size=""/>
+            <input variable="fixedcosts"/>
+            <input variable="ppu"/>
+            <input variable="cpu"/>
+            <assign variable="breakeven" expression="(ppu-cpu)/fixedcosts"/>
+            <output expression="&quot;Break even point is $&quot; &amp;breakeven" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

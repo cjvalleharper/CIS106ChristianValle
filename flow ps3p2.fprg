@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 05:46:14 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDU6MDQ6NTEgUE07MjkyMw=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMTY7MDU6NDY6MTQgUE07MjszMDM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="currentprice" type="Real" array="False" size=""/>
+            <declare name="purchaseprice" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <input variable="currentprice"/>
+            <input variable="purchaseprice"/>
+            <input variable="quantity"/>
+            <assign variable="value" expression="(currentprice-purchaseprice)*quantity"/>
+            <output expression="&quot;Value is $&quot; &amp;value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
