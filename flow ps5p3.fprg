@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 04:22:27 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMjQ7MDQ6MTc6MjQgUE07MjkyNQ=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMjQ7MDQ6MjI6MjcgUE07MjszMDMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="cpb" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="sp" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="cpb"/>
+            <assign variable="extprice" expression="qty*cpb"/>
+            <if expression="extprice &lt; 50">
+                <then>
+                    <assign variable="sp" expression="25"/>
+                </then>
+                <else>
+                    <assign variable="sp" expression="50"/>
+                </else>
+            </if>
+            <assign variable="total" expression="sp+extprice"/>
+            <output expression="&quot;Shipping is: $&quot; &amp;sp" newline="True"/>
+            <output expression="&quot;Order Total is: $&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

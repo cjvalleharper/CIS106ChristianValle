@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 04:17:04 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMjQ7MDM6NTA6MDggUE07MjkyMw=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMDktMjQ7MDQ6MTc6MDQgUE07MjszMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="up" type="Real" array="False" size=""/>
+            <input variable="item"/>
+            <input variable="qty"/>
+            <if expression="item == &quot;A&quot;">
+                <then>
+                    <assign variable="up" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="item" expression="&quot;B&quot;"/>
+                    <assign variable="up" expression="20"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty*up"/>
+            <output expression="&quot;Total Price is: $&quot; &amp;extprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
