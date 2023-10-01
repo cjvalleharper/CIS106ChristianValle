@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 04:40:42 AM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDE7MDQ6MzM6NDcgQU07MjkwMA=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDE7MDQ6NDA6NDIgQU07MTszMDAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="partnumber" type="Real" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="partnumber"/>
+            <input variable="qty"/>
+            <if expression="partnumber == 99">
+                <then>
+                    <assign variable="price" expression="2"/>
+                </then>
+                <else>
+                    <if expression="partnumber == 10 or partnumber = 55">
+                        <then>
+                            <assign variable="price" expression="1"/>
+                        </then>
+                        <else>
+                            <if expression="partnumber == 80 or partnumber = 70">
+                                <then>
+                                    <assign variable="price" expression="3"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="5"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="qty*price"/>
+            <output expression="&quot;Total is: $&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
