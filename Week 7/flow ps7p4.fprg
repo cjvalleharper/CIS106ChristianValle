@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 04:56:06 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDg7MDM6NTA6MTggUE07MjkxOA=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDg7MDQ6NTY6MDYgUE07MzszMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rateofpay" type="Real" array="False" size=""/>
+            <declare name="gross" type="Real" array="False" size=""/>
+            <declare name="data" type="Real" array="False" size=""/>
+            <declare name="choice" type="String" array="False" size=""/>
+            <declare name="OT" type="Real" array="False" size=""/>
+            <assign variable="data" expression="0"/>
+            <output expression="&quot;Proceed? Yes | No&quot;" newline="True"/>
+            <input variable="choice"/>
+            <while expression="choice = &quot;Yes&quot;">
+                <input variable="lname"/>
+                <input variable="hours"/>
+                <input variable="rateofpay"/>
+                <if expression="hours &gt; 40">
+                    <then>
+                        <output expression="&quot;Overtime bonus detected&quot;" newline="True"/>
+                        <assign variable="OT" expression="(hours-40)*rateofpay*1.5"/>
+                        <assign variable="gross" expression="rateofpay*40+OT"/>
+                    </then>
+                    <else>
+                        <assign variable="gross" expression="rateofpay*hours"/>
+                    </else>
+                </if>
+                <output expression="&quot;Output for: &quot; &amp;lname" newline="True"/>
+                <output expression="&quot;Gross Pay is: $&quot; &amp;gross" newline="True"/>
+                <assign variable="data" expression="data+1"/>
+                <output expression="&quot;Data enteries: &quot; &amp;data" newline="True"/>
+                <output expression="&quot;Run again?&quot;" newline="True"/>
+                <input variable="choice"/>
+            </while>
+            <output expression="&quot;Goodbye... :(&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

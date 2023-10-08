@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 03:47:57 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDg7MDM6MjU6MzQgUE07MjkxOA=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMDg7MDM6NDc6NTcgUE07MTszMDM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice" type="String" array="False" size=""/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="data" type="Real" array="False" size=""/>
+            <assign variable="data" expression="0"/>
+            <output expression="&quot;Run program? Type Yes or No&quot;" newline="True"/>
+            <input variable="choice"/>
+            <while expression="choice = &quot;Yes&quot;">
+                <input variable="lname"/>
+                <input variable="exam1"/>
+                <input variable="exam2"/>
+                <assign variable="data" expression="data+1"/>
+                <assign variable="average" expression="(exam1+exam2)/2"/>
+                <output expression="&quot;Data Enteries: &quot; &amp;data" newline="True"/>
+                <output expression="&quot;Average for Exam 1 and Exam 2 is: &quot; &amp;average" newline="True"/>
+                <output expression="&quot;Try again?&quot;" newline="True"/>
+                <input variable="choice"/>
+            </while>
+            <output expression="&quot;Goodbye...&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
