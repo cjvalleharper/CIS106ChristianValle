@@ -1,0 +1,9 @@
+Apple
+10
+50
+Orange
+2
+10
+Banana
+4
+8

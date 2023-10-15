@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cjval"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 03:34:48 PM"/>
+        <attribute name="created" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMTU7MDI6NTI6NDYgUE07MjkxOA=="/>
+        <attribute name="edited" value="Y2p2YWw7REVTS1RPUC1CVEFPSlVNOzIwMjMtMTAtMTU7MDM6MzQ6NDggUE07MjszMDMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count" type="Real" array="False" size=""/>
+            <declare name="end" type="Real" array="False" size=""/>
+            <declare name="slot1" type="Real" array="False" size=""/>
+            <declare name="slot2" type="Real" array="False" size=""/>
+            <assign variable="slot1" expression="0"/>
+            <assign variable="slot2" expression="1"/>
+            <assign variable="count" expression="1"/>
+            <assign variable="end" expression="6765"/>
+            <while expression="count &lt; end">
+                <assign variable="count" expression="slot1+slot2"/>
+                <output expression="&quot;Count: &quot; &amp;count" newline="True"/>
+                <assign variable="slot1" expression="slot2"/>
+                <assign variable="slot2" expression="count"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
